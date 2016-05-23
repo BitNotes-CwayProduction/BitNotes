@@ -27,7 +27,7 @@ input {
 	margin: 2px;
 	border: 1.2px black;
 	width: 100%;
-	text-align: center;
+	/*text-align: center;*/
 }
 
 input[type=checkbox] {
