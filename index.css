@@ -20,13 +20,24 @@ body {
 	height: 50%;
 }
 
+#subcontainer {
+	background-color: white;
+	opacity: 0.9;
+	border-radius: 4px;
+	padding: 10px;
+}
+
 input {
 	background-color: #fff8f8;
 	text-decoration: none;
 	padding: 5px;
-	margin: 2px;
+	margin: 5px;
 	border: 1.2px black;
-	width: 100%;
+	display: inline-block;
+	width: 80%;
+	left: 5px;
+	right: 5px;
+	position: relative;
 	/*text-align: center;*/
 }
 
@@ -82,28 +93,53 @@ input[type=submit]:hover {
 	color: white;
 }
 
+#login, #signup {
+	-webkit-transition: display 1s ease-in-out;
+	-moz-transition: display 1s ease-in-out;
+	transition: display 1s ease-in-out;
+}
 #login {
-	display: block;
+	display: none;
 }
 
 #signup {
 	display: none;
 }
 
-#thirdPartyLogins {
-	height: 15px;
+.thirdPartyLogins {
 	margin: 2px;
-	position: relative;
-	display: block;
+	width: auto;
+	left: 0;
+	right: 0;
+	margin: auto;
+	text-align: center;
+	justify-content: center;
+}
+
+.thirdPartyLogin {
+	display: inline-block;
+	background-color: white;
+	margin-bottom: 5px;
+	width: 200px;
+	padding: 5px;
+	color: white;
+	font-size: 1.2em;
+}
+
+#facebook {
+	background-color: #6577C2;
+}
+
+#google {
+	background-color: #E15242;	
 }
 
 .thirdPartyLogo {}
 
-.thirdPartyText {}
 
 @media screen and (max-width: 700px) {
 	input {
-		width: 100%;
+		width: 80%;
 	}
 	#container {
 		width: 100%;
