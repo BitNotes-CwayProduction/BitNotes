@@ -1,0 +1,104 @@
+body {
+	margin: 0;
+	background: url("home.png") no-repeat;
+	background-position: center top;
+}
+
+#container {
+	position: absolute;
+	top: 40px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 500px	;
+	align-items: center;
+	text-align: center;
+	padding: 50px;
+	display: block;
+	box-sizing: border-box;
+	justify-content: center;
+	height: 50%;
+}
+
+input {
+	background-color: #fff8f8;
+	text-decoration: none;
+	padding: 5px;
+	margin: 2px;
+	border: 1.2px black;
+	width: 100%;
+	text-align: center;
+}
+
+input[type=checkbox] {
+	width: auto;
+	/*margin: 0.5em;*/
+}
+input[type=submit] {
+	padding: 8px;
+	font-size: 1.2em;
+	margin: 10px;
+	width: auto;
+	background-color: #6f616b;
+	color: white;
+	display: inline-block;
+	box-sizing: border-box;
+	transform: background 2s;
+	border-radius: 3px;
+}
+
+input[type=submit]:hover {
+	opacity: 0.7;
+}
+
+#loginnav, #signupnav {
+	display: inline-block;
+	color: white;
+	padding: 10px;
+	border-radius: 3px;
+	margin-bottom: 5px;
+	font-size: 1.2em;
+	opacity: 0.3;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+}
+
+#loginnav {
+	background-color: #507CC0;
+	opacity: 1.0;
+}
+
+#signupnav {
+	background-color: #DF4930;
+}
+
+#loginnav:hover, #signupnav:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+#logo {
+	color: white;
+}
+
+#login {
+	display: block;
+}
+
+#signup {
+	display: none;
+}
+
+@media screen and (max-width: 700px) {
+	input {
+		width: 100%;
+	}
+	#container {
+		width: 100%;
+	}
+	body {
+		background-position: left;
+	}
+}
+
