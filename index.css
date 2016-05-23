@@ -5,10 +5,10 @@ body {
 }
 
 #container {
-	position: absolute;
+	position: relative;
 	top: 40px;
-	left: 0;
-	right: 0;
+	left: 5px;
+	right: 5px;
 	margin: auto;
 	width: 500px	;
 	align-items: center;
