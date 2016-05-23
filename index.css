@@ -120,21 +120,60 @@ input[type=submit]:hover {
 	display: inline-block;
 	background-color: white;
 	margin-bottom: 5px;
-	width: 200px;
-	padding: 5px;
-	color: white;
-	font-size: 1.2em;
+	width: auto;
+	padding: 5px 5px 5px 0;
 }
+
+
 
 #facebook {
 	background-color: #6577C2;
+}
+
+#facebook:hover {
+	background-color: #2067C7;
 }
 
 #google {
 	background-color: #E15242;	
 }
 
-.thirdPartyLogo {}
+#google:hover{
+	background-color: #ff0000;
+}
+
+.thirdPartyLogo {
+	width: 10px;
+	height: 100%;
+	padding-right: 2px;
+	padding-left
+	/*font-size: 2em;*/
+	color: white;
+	font-weight: bold;
+	display: inline-block;
+}
+
+.thirdPartyText {
+	font-size: 1.2em;
+	color: white;
+}
+
+#googletext, #fbtext {
+	padding: 10px;
+}
+
+#googletext::before, #fbtext::before {
+	padding-right: 5px;
+}
+
+#googletext::before {
+	content: "\f0d5";
+}
+
+
+#fbtext::before {
+	content: "\f09a";
+}
 
 
 @media screen and (max-width: 700px) {
