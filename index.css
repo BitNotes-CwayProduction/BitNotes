@@ -90,6 +90,17 @@ input[type=submit]:hover {
 	display: none;
 }
 
+#thirdPartyLogins {
+	height: 15px;
+	margin: 2px;
+	position: relative;
+	display: block;
+}
+
+.thirdPartyLogo {}
+
+.thirdPartyText {}
+
 @media screen and (max-width: 700px) {
 	input {
 		width: 100%;
