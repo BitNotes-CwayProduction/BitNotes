@@ -1,4 +1,4 @@
-#!/bin/sh
+# !/bin/sh
 # Sync your current repo with github, standard and novice way
 # Commit to master branch
 # Author : Himanshu Shekhar < https://github.com/himanshub16 >

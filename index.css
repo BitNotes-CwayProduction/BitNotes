@@ -122,6 +122,7 @@ input[type=submit]:hover {
 	margin-bottom: 5px;
 	width: auto;
 	padding: 5px 5px 5px 0;
+	cursor: pointer;
 }
 
 
