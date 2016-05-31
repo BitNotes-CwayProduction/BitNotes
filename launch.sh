@@ -1,1 +1,1 @@
-cp * /var/www/html/ -r
+cp * /var/www/html/bitnotes -r
