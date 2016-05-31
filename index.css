@@ -1,12 +1,12 @@
 body {
 	margin: 0;
-	background: url("home.png") no-repeat;
+	background: url("bg.jpg") no-repeat;
 	background-position: center top;
 }
 
 #container {
 	position: relative;
-	top: 40px;
+	top: 60px;
 	left: 5px;
 	right: 5px;
 	margin: auto;
@@ -90,7 +90,19 @@ input[type=submit]:hover {
 }
 
 #logo {
-	color: white;
+	color: black;
+	font-weight: bold;
+	font-family: impact;
+	margin-top: 50px;
+	margin-left: 50px;
+
+}
+#brandName{
+	text-decoration: none;
+	color: lightgreen;
+}
+#brandName:hover{
+	color: green;
 }
 
 #login, #signup {
@@ -130,6 +142,12 @@ input[type=submit]:hover {
 #facebook {
 	background-color: #6577C2;
 }
+.thirdPartyLogo{
+	height: 20px;
+	width: 20px;
+	padding-left: 1em;
+	vertical-align: center;
+}
 
 #facebook:hover {
 	background-color: #2067C7;
@@ -142,21 +160,11 @@ input[type=submit]:hover {
 #google:hover{
 	background-color: #ff0000;
 }
-
-.thirdPartyLogo {
-	width: 10px;
-	height: 100%;
-	padding-right: 2px;
-	padding-left
-	/*font-size: 2em;*/
-	color: white;
-	font-weight: bold;
-	display: inline-block;
-}
-
 .thirdPartyText {
 	font-size: 1.2em;
+	vertical-align: center;
 	color: white;
+	padding-right: 1em
 }
 
 #googletext, #fbtext {
