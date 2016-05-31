@@ -99,10 +99,10 @@ input[type=submit]:hover {
 }
 #brandName{
 	text-decoration: none;
-	color: lightgreen;
+	color: #990099;
 }
 #brandName:hover{
-	color: green;
+	color: #ffff00;
 }
 
 #login, #signup {
