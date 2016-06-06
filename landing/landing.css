@@ -6,13 +6,14 @@ header {
 	width: 100%;
 	height: 120px;
 	background-color: #02393E;
+	box-shadow: 0px 5px 10px 2px #808080;
 }
 
 .topnav {
 	height: 50px;
 	color: white;
 	width: 100%;
-	border: 1px solid wheat;
+	/*border: 1px solid wheat;*/
 }
 
 #logo {
@@ -45,6 +46,10 @@ header {
 	display: inline-flex;
 }
 
+.searchbox:hover {
+	box-shadow: 0px 0px 5px 3px #87cefa;
+}
+
 .searchbox form {
 	display: block;
 	width: 150px;
@@ -60,12 +65,10 @@ header {
 .searchbox input[type=search] {
 	width: 100%;
 	border: none;
-	font-style: oblique;
 	height: 100%;
-	border-radius: 3px;
+	font-style: 
 	padding-left: 2em;
 	padding-right: 2em;
-	/*font-size: 1.1em;*/
 }
 /*
 .searchbox .searchicon {
@@ -81,32 +84,147 @@ header {
 }
 */
 
-.profilepic {
-	width: 30px;
-	margin-left: 30px;
-	height: 30px;
-	overflow: hidden;
+.profilepic_container {
+	width: 50px;
 	/*border: 1px solid white;*/
-	background: url("../images/himanshu.jpg") center no-repeat;
-	background-size: contain;
+	margin-left: 2px;
+	height: 30px;
+	margin-right: 50px;
+	display: relative;
+}
+
+.profilepic_container img {
+	margin-left: 30px;
+	margin-right: 5px;
+	height: 28px;
+	overflow: hidden;
+	border: 1px solid white;
+	border-radius: 2px;
 	background-color: transparent;
+	float: left;
+	display: inline-block;
+	vertical-align: middle;
 }
 
-.profilepic:hover {
+.profilepic_container>img:hover {
 	opacity: 0.7;
-	border: 2px solid white;
-	border-radius: 10px;
-	margin-left: 28px;
-	width: 28px;
 }
 
-.overlap {
-	border: .2px solid pink;
-	height: 100px;
+.downarrow {
+	content: '';
+    position: absolute;
+    /*left: 18px;
+    top: 50px;*/
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid white;
+}
+
+.uparrow {
+	content: '';
+    position: absolute;
+    /*left: 18px;
+    top: 50px;*/
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid white;
+	border-top: 0;
+}
+
+.dropdown {
+	/*display: none;*/
+	position: relative;
+	right: 0;
+	margin-left: -70px;
+	margin-top: 35px;
+	background-color: #f9f9f9;
+	color: black;
+	width: 140px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 10;
+	opacity: 1;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+	border-radius: 2px;
+}
+
+.dropdown ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.dropdown li {
+	display: block;
+	cursor: pointer;
+	padding: 5px 5px 5px 10px;
 	left: 0;
 	right: 0;
-	margin: -40px auto;
-	width: 90%;
+	margin: 5px 0px 0px 0px;
+	
+	white-space: nowrap;
+	width: 123px;
+}
+
+.dropdown li:hover {
+	background-color: #DED6D6;
+	border: 1px solid darkgrey;
+}
+
+.sidebar {
+	position: fixed;
+	width: auto;
+	padding: 5px;
+	max-width: 100px;
+	height: 1.2em;
+	right: 0;
+	margin-right: 0px;
+	margin-top: 35px;
+	display: block;
+	cursor: pointer;
+	/*border: 1px solid white;*/
+	color: white;
+	background-color: darkred;
+	font-weight: bold;
+	font-style: oblique;
+	z-index: 10;
+	-webkit-transition: background-color 0.5s;
+	-moz-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+}
+
+.elem-hidden {
+	display: none;
+}
+
+.quickstats {
+	position: relative;
+	background-color: #e6e6fa;
+	color: #000;
+	font-size: 0.95em;
+	margin-right: -5px;
+	margin-top: 10px;
+	width: 250px;
+	float: right;
+	display: none;
+	white-space: nowrap;
+	animation: appear_from_right 0.5s;	
+	transition: width ease-in-out;
+	border-radius: 4px;
+}
+
+@keyframes appear_from_right {
+	0%		{ width: 0; }
+	100%	{ width: 250px; }
+}
+
+.dropdown-content, .quickstats ul {
+	list-style-type: none;
+	text-decoration: none;
 }
 
 footer {
@@ -116,4 +234,54 @@ footer {
 	width: 90%;
 	border: 1px solid;
 	
+}
+
+.overlap {
+	border: 2px solid pink;
+	height: auto;
+	position: fixed;
+	left: 0;
+	right: 0;
+	/*bottom: 2em;*/
+	margin: -40px auto;
+	width: 90%;
+	background-color: rgba(255,255,255, 0.8);;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	z-index: 8;
+}
+
+.overlap section {
+	width: 32%;
+	/*border: 1px solid red;*/
+	padding-right: 1%;
+	border-left: 5px solid #7e4ba0;
+	/*opacity: 1;*/
+	color: black;
+}
+
+.overlap header {
+	top: 0;
+	height: auto;
+	background-color: transparent;
+	box-shadow: none;
+	color: black;
+}
+
+.overlap header h4 {
+	margin: 2px 0 10px 5px;
+}
+
+.overlap hr {
+	height: 1.2px;
+	background-color: black;
+	margin-left: 2px;
+}
+
+@media screen and (min-width: 900px) {
+	.overlap {
+		flex-direction: row;
+	}
 }
