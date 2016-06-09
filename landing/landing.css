@@ -231,15 +231,18 @@ footer {
 	bottom: 0;
 	position: fixed;
 	text-align: center;
-	width: 90%;
+	width: 100%;
 	border: 1px solid;
-	
+	z-index: 10;
+	background-color: grey;
+	color: white;
+	font-size: 1.2em;
 }
 
 .overlap {
 	border: 2px solid pink;
 	height: auto;
-	position: fixed;
+	position: absolute;
 	left: 0;
 	right: 0;
 	/*bottom: 2em;*/
@@ -297,9 +300,14 @@ footer {
 	.overlap {
 		flex-direction: row;
 	}
-	.overlap section {
-		/*max-height: 500px;*/
-		width: 32%;
+	.overlap .navigate-content-container {
+		width: 40%;
+	}
+	.overlap .popular-content-container {
+		width: 100%;
+	}
+	.overlap .latest-uploads-container {
+		width: 100%;
 	}
 }
 
