@@ -1,53 +1,27 @@
-
-document.onreadystatechange = function() {
-	if (document.readyState == 'complete') {
-		addListeners();
-		return;
-	}
-}
-
 function addListeners() {
-	quickstats_display_toggle();
-	searchbar_width_change();
-	show_dropdown();
+	listenToSearchIcon();
+	showQuickStats();
 }
 
-function show_dropdown() {
-	var elem = document.getElementsByClassName('profilepic_container')[0];
-	elem.addEventListener('click', function() {
-	this.getElementsByClassName('dropdown')[0].classList.toggle('elem-hidden');
-	document.getElementsByClassName('sidebar')[0].classList.toggle('elem-hidden');
-	document.getElementById('dropdown-arrow').classList.toggle('uparrow');
+function listenToSearchIcon() {
+	document.getElementById('searchicon').addEventListener('click',function () {
+		document.getElementById('searchbox').getElementsByTagName('input')[0].focus();
+		// console.log('calling from houston');
+		// console.log(document.activeElement);
 	});
 }
 
-function searchbar_width_change() {
-	document.forms.rawsearch.getElementsByTagName('input')[0].addEventListener('input', function (e) {
-		if (this.value == "") {
-			this.parentElement.style.width = "150px";
-			this.parentElement.style.boxShadow = "none";
-			this.style.fontStyle = "oblique";
+function showQuickStats() {
+	document.getElementById('quickstats-toggler').addEventListener('click', function() {
+		var cond = document.getElementById('quickstats-menu');
+		// console.log('sob clicked');
+		if (parseInt(cond.style.marginLeft) < 0) {
+			cond.style.marginLeft = 10;
 		} else {
-			this.parentElement.style.width = "300px";
-			this.parentElement.style.boxShadow = "0px 0px 5px 3px #87cefa";
-			this.fontStyle = "normal";
+			cond.style.marginLeft = -1000;
 		}
+		// console.log('function complete');
 	});
 }
 
-function quickstats_display_toggle() {
-	var quickstats = document.getElementsByClassName('quickstats')[0];
-	var sidebar = document.getElementsByClassName('sidebar')[0];
-	sidebar.addEventListener('click', function() {
-		if (quickstats.style.display == "none") {
-			quickstats.style.display = "block";
-		} else {
-			quickstats.style.display = "none";
-		}
-	});
-}
-
-function blank_submit_validate () {
-	console.log(this);
-}
-
+addListeners();

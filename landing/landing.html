@@ -1,82 +1,85 @@
-<!DOCTYPE html>
 <html>
-	
 <head>
+	<title>Welcome User!</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="landing.css" />
-	<link type="image/png" href="../favicon.ico" />
-	<script src="landing.js"></script>
-	<title> Welcome <!--USERNAME--> </title>
-	<!--<meta http-equiv="refresh" content="2" />-->
+	<!-- <meta http-equiv="refresh" content="3" /> -->
 </head>
 
 <body>
-	
-<header>
-	<div class="topnav">
-		<div id="logo">
-			<strong><h1>LOGO</h1></strong>
-		</div>
-		<aside>
-			<div class="searchbox">
-				<form name="rawsearch" onsubmit=blank_submit_validate() method="POST" action="http://localhost/samplesubmit.php">
-					<input type="search" placeholder="Search here..." name="query" />
-				</form>
-				<span class="searchicon"></span>	
-			</div>
-			<div class="profilepic_container">
-				<img src="../images/himanshu.jpg" />
-				<span class="downarrow" id="dropdown-arrow" style="top:30px"></span>
-				<div class="dropdown elem-hidden">
-					<ul class="dropdown-content">
-						<li>My Dashboard</li>
-						<li>Settings</li>
-						<li>Logout</li>
-					</ul>
-				</div>
-			</div>
-			
-			
-		</aside>
-		
-		
-	</div>
-	<span class="sidebar">
-		QUICKSTATS	
-		<div class="quickstats">
+
+<header id="top-header">
+	<h1 id="logo">BITNOTES</h1>
+	<div id="profilepic-container">
+		<span class="profilepic"></span>
+		<span class="downarrow"></span>
+		<div class="dropdown-list">
 			<ul>
-				<li>Name: WHOAMI</li>
-				<li>City: gorakhpur </li>
+				<li>My Dashboard</li>
+				<li>Profile Settings</li>
+				<li>Logout</li>
 			</ul>
 		</div>
-	</span>
+	</div>
+	<div id="searchbox">
+		<form>
+			<input type="search" name="query" placeholder="Search" />
+			<label for="query"><img id="searchicon" src="../images/search.png" /></label>
+		</form>
+	</div>
 </header>
 
-<div class="overlap">
-	<section class="navigate-content-container">
-		<header><h4>Navigate</h4></header>
-		<hr />
-		
-		<form name="navigate-form" action="http://localhost/samplesubmit.php" method="POST">
-		
-		</form>
-	</section>
-	<section class="popular-content-container">
-		<header><h4>Popular posts</h4></header>
-		<hr />
-		<div class="content-box"></div></section>	
-	<section class="latest-uploads-container">
-		<header><h4>Latest posts</h4></header>
-		<hr />
-		<div class="content-box"></div>
-	</section>
-	
+<div id="quickstats-toggler">
+	<span>&equiv;</span>
+
+	<div id="quickstats-menu">
+		you: i don't know <br />
+		you : who are you<br />
+		kaun hain aap : bhaad me jao<br />
+		mera sar mat khaao
+	</div>
 </div>
-	
-<footer>
-	contact us on mars
-</footer>
-</body>	
+
+<main>
+
+<section id="navigation-pane">
+	The first section
+</section>
+
+<section id="trending-pane">
+	<div class="content-box">
+		<span class="content-thumb"></span>
+		<span class="content-stats">
+			<div>
+				100 <br /> <span style="font-weight: bold;">&#10084;</span>
+			</div style="float: right; ">
+			<div>
+				1000 <br /> <span style="font-weight: bold;">&#8983;</span>
+			</div>
+		</span>
+		<span class="content-description">
+			SPAS by Prof. Ganguly <br />
+			Lecture Notes<br />
+			Probability and Statistics<br />
+			Chaitanya<br />
+			Indian Institute of Information Technology<br />
+		</span>
+	</div>
+	<div class="content-box">
+		The second one
+	</div>
+	<div class="content-box">
+		The third one
+	</div>
+	<div class="content-box">
+		The fourth one
+	</div>
+</section>
+
+</main>
+
+<script src="landing.js"></script>
+</body>
 
 </html>
