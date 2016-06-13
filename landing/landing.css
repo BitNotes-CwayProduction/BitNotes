@@ -69,6 +69,10 @@ body {
 	top: 20px;
 }
 
+#profilepic-container:hover .dropdown-list {
+	display: block;
+}
+
 .profilepic {
 	display: block;
 	background: url('../images/himanshu.jpg');
@@ -93,6 +97,20 @@ body {
 	border: 1px solid black;
 	border-radius: 4px;
 	box-shadow: 1px 1px 2px 3px;
+}
+
+.dropdown-list .dropdown-header {
+	padding-top: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+	/*border-bottom: 1px solid;*/
+	border: 0.2px solid white;
+	border-top: none;
+	color: white;
+	opacity: 0.8;
+	display: block;
+	font-weight: bold;
+	cursor: default;
 }
 
 .dropdown-list ul {

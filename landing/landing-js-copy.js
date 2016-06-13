@@ -52,3 +52,16 @@ function likeHit() {
 	}
 }
 addListeners();
+
+//
+document.getElementsByClassName('content-stats')[0].addEventListener('click', function() {
+	// console.log('sob clicked');
+
+
+// Jquery
+
+jQuery(document).ready(function() {
+	$("#top-header").on("click","#profilepic-container",function(){
+		$("#top-header").find(".dropdown-list").slideToggle();
+	});
+});
