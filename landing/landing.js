@@ -25,3 +25,12 @@ function showQuickStats() {
 }
 
 addListeners();
+
+
+// Jquery
+
+jQuery(document).ready(function() {
+	$("#top-header").on("click","#profilepic-container",function(){
+		$("#top-header").find(".dropdown-list").slideToggle();
+	});
+});

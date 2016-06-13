@@ -114,16 +114,10 @@ body {
 	font-weight: normal;
 	cursor: pointer;
 }
-
 .dropdown-list ul li:hover, .dropdown-list ul li:active {
 	opacity: 0.7;
 	color: white;
 }
-
-#profilepic-container:hover .dropdown-list {
-	display: block;
-}
-
 .downarrow {
 	width: 0;
 	height: 0;
