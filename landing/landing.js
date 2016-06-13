@@ -53,6 +53,16 @@ function likeHit() {
 }
 addListeners();
 
+<<<<<<< HEAD
 document.getElementsByClassName('content-stats')[0].addEventListener('click', function() {
 	// console.log('sob clicked');
+=======
+
+// Jquery
+
+jQuery(document).ready(function() {
+	$("#top-header").on("click","#profilepic-container",function(){
+		$("#top-header").find(".dropdown-list").slideToggle();
+	});
+>>>>>>> e89bfcb78efe3bf3392c1d938b616ee6b93541f3
 });

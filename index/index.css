@@ -1,6 +1,6 @@
 body {
 	margin: 0;
-	background: url("bg.jpg") no-repeat;
+	background: url("images/bg.jpg") no-repeat;
 	background-position: center top;
 	background-size: cover;
 }
@@ -69,23 +69,25 @@ input[type=submit]:hover {
 	border-radius: 3px;
 	margin-bottom: 5px;
 	font-size: 1.2em;
-	opacity: 0.3;
-	-webkit-transition: opacity 0.5s ease-in-out;
-	-moz-transition: opacity 0.5s ease-in-out;
-	transition: opacity 0.5s ease-in-out;
+	opacity: 1;
+	-webkit-transition: background-color 0.5s ease-in-out;
+	-moz-transition: background-color 0.5s ease-in-out;
+	-ms-transition: background-color 0.5s ease-in-out;
+	-o-transition: background-color 0.5s ease-in-out;
+	transition: background-color 0.5s ease-in-out;
 }
 
 #loginnav {
-	background-color: #28601d;
-	opacity: 1.0;
+	background-color: #00cc00;
 }
-
+#loginnav:hover{
+	background-color: #009900;
+}
 #signupnav {
-	background-color: #DF4930;
+	background-color: #ff4d4d;
 }
-
-#loginnav:hover, #signupnav:hover {
-	opacity: 1;
+#signupnav:hover {
+ 	background-color: #ff0000;
 	cursor: pointer;
 }
 
@@ -101,6 +103,12 @@ input[type=submit]:hover {
 	text-decoration: none;
 	color: #990099;
 	letter-spacing: 2px;
+	-webkit-transition: color 0.5s;
+	-moz-transition: color 0.5s;
+	-ms-transition: color 0.5s;
+	-o-transition: color 0.5s;
+	transition: color 0.5s;
+
 }
 #brandName:hover{
 	color: #ffff00;
@@ -109,6 +117,8 @@ input[type=submit]:hover {
 #login, #signup {
 	-webkit-transition: display 1s ease-in-out;
 	-moz-transition: display 1s ease-in-out;
+	-ms-transition: display 1s ease-in-out;
+	-o-transition: display 1s ease-in-out;
 	transition: display 1s ease-in-out;
 }
 #login {
@@ -137,17 +147,19 @@ input[type=submit]:hover {
 	padding: 5px 5px 5px 0;
 	cursor: pointer;
 }
-
-
-
-#facebook {
-	background-color: #6577C2;
-}
 .thirdPartyLogo{
 	height: 20px;
 	width: 20px;
 	padding-left: 1em;
 	vertical-align: center;
+}
+#facebook {
+	background-color: #6577C2;
+	-webkit-transition: background-color 0.5s;
+	-moz-transition: background-color 0.5s;
+	-ms-transition: background-color 0.5s;
+	-o-transition: background-color 0.5s;
+	transition: background-color 0.5s;
 }
 
 #facebook:hover {
@@ -156,6 +168,11 @@ input[type=submit]:hover {
 
 #google {
 	background-color: #E15242;	
+	-webkit-transition: background-color 0.5s;
+	-moz-transition: background-color 0.5s;
+	-ms-transition: background-color 0.5s;
+	-o-transition: background-color 0.5s;
+	transition: background-color 0.5s;
 }
 
 #google:hover{
