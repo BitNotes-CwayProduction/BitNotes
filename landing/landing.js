@@ -5,11 +5,24 @@ function addListeners() {
 }
 
 function listenToSearchIcon() {
-	document.getElementById('searchicon').addEventListener('click',function () {
-		document.getElementById('searchbox').getElementsByTagName('input')[0].focus();
-		// console.log('calling from houston');
-		// console.log(document.activeElement);
-	});
+	var sbox = document.getElementById('searchbox');
+	var sicon = document.getElementById('searchicon');
+	var sinput = sbox.getElementsByTagName('input')[0];
+	// document.getElementById('searchicon').addEventListener('click',function () {
+	// 	if (document.getElementById('searchbox'))
+	// 	document.getElementById('searchbox').getElementsByTagName('input')[0].focus();
+	// 	// console.log('calling from houston');
+	// 	// console.log(document.activeElement);
+	// });
+
+	sicon.addEventListener('click', function() {
+		if (sinput.value.length == 0) {
+			sbox.getElementsByTagName('input')[0].focus();
+		} else {
+			sbox.getElementsByTagName('form')[0].submit();
+			console.log('calling from houston');
+		}
+	})
 }
 
 function showQuickStats() {
