@@ -69,14 +69,13 @@ body {
 .profilepic {
 	display: block;
 	background: url('../images/himanshu.jpg');
-	background-color: pink;
 	background-position: center;
 	background-size: cover;
 	width: 40px;
 	height: 40px;
+	border-radius: 100%;
 	margin-right: 15px;
 	margin-bottom: 2px;
-	border: 1px solid blue;
 }
 
 .dropdown-list {
