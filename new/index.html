@@ -11,21 +11,21 @@
 
 <header class="top-nav">
 	<a href="index.html"><span id="logo" class="button">BITNOTES</span></a>
-	<nav class="pages-menu">
-			<a id="to-article-1" href="#article-1" class="button">1</a>
-			<a id="to-article-2" href="#article-2" class="button">2</a>
-			<a id="to-article-3" href="#article-3" class="button">3</a>
-			<a id="to-article-4" href="#article-4" class="button">4</a>
-	</nav>
 	<div class="entry-gate">
-		<a href="#article-5" id="to-article-5"><span class="button login">LOGIN</span></a>
-		<a href="#article-5" id="to-article-6"><span class="button signup">SIGNUP</span></a>
+		<a id="to-article-5" href="#article-5" class="button login">LOGIN</a>
+		<a id="to-article-6" href="#article-5" class="button signup">SIGNUP</a>
 	</div>
+	<nav class="pages-menu">
+			<a id="to-article-1" href="#article-1" class="button">What is Bitnotes</a>
+			<a id="to-article-2" href="#article-2" class="button">Goals</a>
+			<a id="to-article-3" href="#article-3" class="button">How you are benefited?</a>
+			<a id="to-article-4" href="#article-4" class="button">Why should you use?</a>
+	</nav>
 </header>
 
 <main>
 
-	<article class="intro main-section" id="article-1">
+	<article id="article-1">
 		<p>
 			Set Fire To The Rain<br />
 			Royal Albert Hall(Concert) <br />
@@ -33,21 +33,21 @@
 		</p>
 	</article>
 
-	<article class="recommendations main-section" id="article-2">
+	<article id="article-2">
 		<p>
 			Rolling In The Deep<br />
 			SSE Arena, Glasgow
 		</p>
 	</article>
 
-	<article class="login-signup main-section" id="article-3">
+	<article id="article-3">
 		<p>
 			Hello <br />
 			from London
 		</p>
 	</article>
 
-	<article class="login-signup main-section" id="article-4">
+	<article id="article-4">
 		<p>
 			Rolling In The Deep<br />
 			from music video<br />
@@ -55,30 +55,33 @@
 		</p>
 	</article>
 
-	<article class="login-signup main-section" id="article-5">
-		<div style="padding: 10px; background: rgba(255,255,255,0.7); color: black; width: 500px; text-align: center;">
-			<div>
-				A Sky Full of Stars 
-			</div>
-			<div>
-				<section style="width: 50%; float: left;">
-					<form name="login" action="https://localhost/sample_post.php" method="post">
-						<input type="email" name="email" placeholder="E-Mail ID" /> <br />
-						<input type="password" name="password" placeholder="Password" /> <br />
-						<input type="submit" value="Submit" /> <br />
-					</form>
-				</section>
-				<section style="width: 50%; float: right;">
-					<form name="signup" action="https://localhost/sample_post.php" method="post">
-						<input type="text" name="username" placeholder="Enter your name" /> <br />
-						<input type="email" name="email" placeholder="Enter E-Mail ID" /> <br />
-						<input type="password" name="password" min-length="8" placeholder="Password" /> <br />
-						<input type="password" id="password-confirm" placeholder="Confirm password" /> <br />
-						<input type="checkbox" name="agree" required="required" /> I agree to terms and conditions. <br />
-						<input type="submit" value="Signup" />
-					</form>
-				</section>
-			</div>
+	<article id="article-5">
+		<div>
+			<section style="width: 50%; border-right: 2px solid black;">
+				<div class="social-login">
+					<div class="social-button facebook" id="facebook-social-login">Connect with Facebook</div>
+					<div class="social-button google" id="google-social-login">Connect with Google</div>
+				</div>
+				<hr />
+				<form name="login" action="https://localhost/samplesubmit.php" method="post">
+					<input type="email" name="email" placeholder="E-Mail ID" required="required" /> <br />
+					<input type="password" name="password" placeholder="Password" required="required" /> <br />
+					<input type="checkbox" name="remember" />Remember me <br />
+					<input type="submit" name="submitButton" value="Login" required="required" /> <br />
+				</form>
+			</section>
+
+			<section style="width: 50%;">
+				<form name="signup" action="https://localhost/samplesubmit.php" method="post">
+					<input type="text" name="username" placeholder="Enter your name" required="required" /> <br />
+					<input type="email" name="email" placeholder="Enter E-Mail ID" required="required" /> <br />
+					<input type="password" name="password" min-length="8" placeholder="Password" required /> <br />
+					<input type="password" name="passwordConfirm" placeholder="Confirm password" required onkeyup="validatePassword()" /> <br />
+					<div id="password-match-display" style="display: none"></div>
+					<input type="checkbox" name="agree" required="required" /> I agree to terms and conditions. <br />
+					<input type="submit" name="submitButton" value="Signup" disabled />
+				</form>
+			</section>
 		</div>
 	</article>
 </main>
@@ -91,7 +94,7 @@
 			increment = 20;
 		var animateScroll = function(elapsedTime) {
 			elapsedTime += increment;
-			var position = easeInOut (elapsedTime, start,change,duration);
+			var position = easeInOut (elapsedTime, start, change, duration);
 			element.scrollTop = position;
 			if (elapsedTime < duration) {
 				setTimeout (function() {
@@ -120,25 +123,39 @@
 	// 	});
 	// 	// console.log('completed for i = ' + i);
 	// }
+	function addNavListeners() {
+		document.getElementById('to-article-1').addEventListener('click', function() {
+			scrollTo(document.body, document.documentElement.clientHeight*0, 2000);
+		});
+		document.getElementById('to-article-2').addEventListener('click', function() {
+			scrollTo(document.body, document.documentElement.clientHeight*1, 2250);
+		});
+		document.getElementById('to-article-3').addEventListener('click', function() {
+			scrollTo(document.body, document.documentElement.clientHeight*2, 2250);
+		});
+		document.getElementById('to-article-4').addEventListener('click', function() {
+			scrollTo(document.body, document.documentElement.clientHeight*3, 2250);
+		});
+		document.getElementById('to-article-5').addEventListener('click', function() {
+			scrollTo(document.body, document.documentElement.clientHeight*4, 2250);
+			document.forms.login.email.focus();
+		});
+		document.getElementById('to-article-6').addEventListener('click', function() {
+			scrollTo(document.body, document.documentElement.clientHeight*4, 2250);
+			document.forms.signup.username.focus();
+		});
+	}
+	function validatePassword() {
+		if (document.forms.signup.password.value == document.forms.signup.passwordConfirm) {
+			console.log('password');
+		}
+		console.log(document.forms.signup.passwordConfirm.value);
+	}
 
-	document.getElementById('to-article-1').addEventListener('click', function() {
-		scrollTo(document.body, document.documentElement.clientHeight*1, 2000);
-	});
-	document.getElementById('to-article-2').addEventListener('click', function() {
-		scrollTo(document.body, document.documentElement.clientHeight*2, 2250);
-	});
-	document.getElementById('to-article-3').addEventListener('click', function() {
-		scrollTo(document.body, document.documentElement.clientHeight*3, 2250);
-	});
-	document.getElementById('to-article-4').addEventListener('click', function() {
-		scrollTo(document.body, document.documentElement.clientHeight*4, 2250);
-	});
-	document.getElementById('to-article-5').addEventListener('click', function() {
-		scrollTo(document.body, document.documentElement.clientHeight*5, 2250);
-	});
-	document.getElementById('to-article-6').addEventListener('click', function() {
-		scrollTo(document.body, document.documentElement.clientHeight*5, 2250);
-	});
+	addNavListeners();
+	// document.forms.signup.password-confirm.addEventListener(keyup, validateForm());
+
+
 
 </script>
 </body>
