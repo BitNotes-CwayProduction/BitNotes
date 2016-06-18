@@ -8,19 +8,12 @@ function listenToSearchIcon() {
 	var sbox = document.getElementById('searchbox');
 	var sicon = document.getElementById('searchicon');
 	var sinput = sbox.getElementsByTagName('input')[0];
-	// document.getElementById('searchicon').addEventListener('click',function () {
-	// 	if (document.getElementById('searchbox'))
-	// 	document.getElementById('searchbox').getElementsByTagName('input')[0].focus();
-	// 	// console.log('calling from houston');
-	// 	// console.log(document.activeElement);
-	// });
 
 	sicon.addEventListener('click', function() {
 		if (sinput.value.length == 0) {
 			sbox.getElementsByTagName('input')[0].focus();
 		} else {
 			sbox.getElementsByTagName('form')[0].submit();
-			console.log('calling from houston');
 		}
 	})
 }
@@ -28,7 +21,6 @@ function listenToSearchIcon() {
 function showQuickStats() {
 	document.getElementById('quickstats-toggler').addEventListener('click', function() {
 		var cond = document.getElementById('quickstats-menu');
-		// console.log('sob clicked');
 		if (parseInt(cond.style.marginLeft) < 0) {
 			this.getElementsByTagName('span')[0].style.color = "blue";
 			cond.style.marginLeft = 10;
@@ -36,7 +28,6 @@ function showQuickStats() {
 			this.getElementsByTagName('span')[0].style.color = "black";
 			cond.style.marginLeft = -1000;
 		}
-		// console.log('function complete');
 	});
 }
 
@@ -46,7 +37,6 @@ function likeHit() {
 		buttonList[i].style.opacity = '0.2';
 		 buttonList[i].parentElement.addEventListener('click', function() {
 			 var curbutton = this.getElementsByClassName('content-likes')[0];
-			//  curbutton.classList.add('content-likes-animate');
 			 if (curbutton.style.animation == '') {
 				 curbutton.style.animation = 'pound .5s';
 			 } else {

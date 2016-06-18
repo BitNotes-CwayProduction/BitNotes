@@ -1,0 +1,147 @@
+body {
+	margin: 0.2px;
+}
+
+.button {
+	display: inline-block;
+	margin: 5px;
+	padding: 10px;
+	background-color: #F5F0F0;
+	color: #272C2E;
+	box-sizing: border-box;
+	font-size: 0.8em;
+	border-radius: 4px;
+	cursor: pointer;
+	opacity: 1;
+	transition: all .5s;
+}
+
+.button:hover {
+	background-color: #F7F7F7;
+	color: black;
+}
+
+.top-nav {
+	width: 100%;
+	display: block;
+	background-color: rgba(255,255,255,0.6);
+	/*opacity: 0.7;*/
+	box-sizing: border-box;
+	/*border: 1px solid red;*/
+	padding: 10px;
+	font-size: 1.5em;
+	position: fixed;
+	z-index: 1;
+}
+
+.top-nav nav {
+	display: inline-flex;
+	flex-direction: row;
+	align-items: stretch;
+	float: left;
+}
+
+.top-nav a {
+	width: auto;
+}
+
+#logo {
+	color: black;
+	cursor: pointer;
+	display: inline-block;
+	box-sizing: border-box;
+	font-weight: bold;
+	float: left;
+	opacity: 1;
+	font-family: 'impact';
+	letter-spacing: 3px;
+	font-size: 1.1em;
+	transition: all .5s ease-in-out;
+}
+
+#logo:hover{
+	/*animation: flip-background 1s;*/
+	background-color: transparent;
+	color: white;
+}
+
+.entry-gate {
+	display: inline-block;
+	float: right;
+	opacity: 1;
+}
+
+.login, .signup {
+	background-color: #21DEEF;
+	color: #F7F7F7;
+}
+
+.signup {
+	/*background-color: #0000bb;*/
+}
+
+.pages-menu {
+	width: 800px;
+	margin-left: 100px;
+	display: inline-flex;
+	justify-content: space-between;
+	/*border: 1px solid black;*/
+	margin-top: 5px;
+}
+
+.pages-menu a {
+	text-decoration: none;
+	background-color: lightgreen;
+	min-width: 100px;
+	display: inline-block;
+	text-align: center;
+}
+
+.pages-menu a:hover {
+	text-decoration: underline;
+}
+
+main {
+	position: relative;
+}
+
+article {
+	/*border: 1px solid red;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	color: white;
+	/*font-size: 2em;*/\
+	opacity: 0.7;
+}
+
+article p {
+	text-align: center;
+	font-size: 1.3em;
+}
+
+.intro {
+	background: url('../images/1.png') center no-repeat;
+	background-size: cover;
+}
+
+.recommendations {
+	background: url('../images/2.png') center no-repeat;
+	background-size: cover;
+}
+
+.login-signup {
+	background: url('../images/3.png') center no-repeat;
+	background-size: cover;
+}
+
+#article-4 {
+	background: url('../images/4.png') center no-repeat;
+	background-size: cover;
+}
+
+#article-5 {
+	background: url('../images/5.png') center no-repeat;
+	background-size: cover;
+}
